@@ -6,6 +6,17 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-	<context:component-scan base-package="com.codingbear.sample">
-	</context:component-scan>		
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	 	 <property name="driverClassName" value="oracle.jdbc.OracleDriver"></property> 
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="book_ex"></property>
+		<property name="password" value="bookex123"></property>
+	</bean>
+	
+	<!-- HikariCP configuration -->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+	</bean>
+	
+	<context:component-scan base-package="com.codingbear.sample"></context:component-scan>		
 </beans>
