@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.codingbear</groupId>
-	<artifactId>controller</artifactId>
+	<artifactId>mvcweb</artifactId>
 	<name>ex01</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
@@ -103,7 +103,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>runtime</scope>
+			<!-- <scope>runtime</scope> -->			
 		</dependency>
 		<!-- log4jdbc-log4j2 - SQL 로그 보기 -->
 		<dependency>
