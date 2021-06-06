@@ -43,7 +43,7 @@ public class BoardMapperTests {
 		board.setContent("테스트 글내용 입력2");
 		board.setWriter("tester2");
 		
-		mapper.insertSelectKy(board);
+		mapper.insertSelectKey(board);
 		
 		log.info("새 글 저장2 : " + board);
 	}

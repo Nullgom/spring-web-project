@@ -11,7 +11,7 @@ public interface BoardMapper {
 	
 	// 새글 저장
 	public void insert(BoardVO board);	
-	public void insertSelectKy(BoardVO board);
+	public void insertSelectKey(BoardVO board);
 	
 	// 글내용 보기
 	public BoardVO read(Long bno);
